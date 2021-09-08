@@ -68,4 +68,17 @@ function fuckingPrint() {
 console.log(fuckingPrint.greeting)
 }
 console.log(fuckingPrint.greeting)
+----------------------------------------------
 */
+
+// Sprint 1, entrega 2 (Classes & Arrow Functions)
+// entrega 2, nivell 1: Utilitza l'intèrpret de node en tots els casos!!!), nivell 1: Imprimir per pantalla el resultat d'una arrow function autoinvocable que sumi dos nombres.
+// KMJ: NodeJS! create a Self-Executing Anonymous Function (aka IIFE: Immediately Invoked Function Expression), that adds two numbers; make it an arrow function
+
+( function () {
+   var Add = (num1, num2) => {
+     return (num1 + num2);
+   }
+   return console.log(Add(37, 37))
+  }) ();
+
