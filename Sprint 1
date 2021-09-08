@@ -1,0 +1,71 @@
+// Sprint 1, entrega 1, nivell 1
+var today = new Date(); // "2021-07-22"
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //remember the 0 index
+var yyyy = today.getFullYear();
+
+if (dd <10) {
+  dd = "0" + dd;
+}
+  
+if (mm <10) {
+  mm = "0" + mm;
+}
+
+today = dd + "/" + mm + "/" + yyyy
+
+console.log(today);
+
+// entrega 1, nivell 1
+let person = [ name, age, hairColor ]
+  var name = "KMJ";
+  var age = "old enough";
+  var hairColor = "purple";
+
+function printName() { 
+  var name = person.getName();
+  
+}
+  console.log(name)
+
+// entrega 1, nivell 2, ex. 1
+
+var firstName = `Mike` 
+var lastName = `Wazowski`
+
+console.log(firstName + " " + lastName)
+
+// entrega 1, nivell 2, ex. 2: Invocar la funció mitjançant template literals
+var firstName = `Mike` 
+var lastName = `Wazowski`
+var greeting = `Hello, ${firstName} ${lastName}! How's it going?`
+
+console.log(greeting)
+
+// entrega 1, nivell 3, ex. 1: Crea una matriu de deu funcions i empleni-la mitjançant un bucle. Cada funció comptarà del 0-9 imprimint-ho per pantalla. Invoqui cada funció de l'array iterativament. Haurà d'imprimir-se per pantalla el compte de 0-9 deu vegades
+const pirates = []
+var say = function walkThePlank(i) {
+   for (var i = 0; i < 10; i++) {
+      console.log(i);
+   }
+}
+
+for (var i = 0; i < 10; i++) {
+   pirates.push(say);
+}
+
+pirates.forEach(say);
+
+
+/* 
+Omar, te dejo este ejemplo de mi frustración un día, en modo de pregunta... ¿cómo se consigue imprimir a la consola desde dentro de una función? (Please excuse/enjoy the language.)
+// WHY the fuck can't I figure out how to print to console from inside a GD function?!
+function fuckingPrint() {
+  var firstName = `WTF`,
+  lastName = `whyDamnit`,
+  greeting = `Hello, ${firstName} ${lastName}! How's it going?`
+  return this.greeting 
+console.log(fuckingPrint.greeting)
+}
+console.log(fuckingPrint.greeting)
+*/
