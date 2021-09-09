@@ -13,22 +13,21 @@ if (mm <10) {
 }
 
 today = dd + "/" + mm + "/" + yyyy
-
 console.log(today);
 
 // entrega 1, nivell 1
-let person = [ name, age, hairColor ]
-  var name = "KMJ";
-  var age = "old enough";
-  var hairColor = "purple";
+var name = "KMJ";
+var age = "old enough";
+var hairColor = "purple";
+var person = [ name, age, hairColor ]
 
 function printName() { 
-  var name = person.getName();
-  
+  var name = person[0];
+  return console.log(name)
 }
-  console.log(name)
+printName();
 
-// entrega 1, nivell 2, ex. 1
+// entrega 1, nivell 2, ex. 1: Imprimir el nom i cognoms de l'usuari en variables mitjançant template literals, creant les variables i referenciant en la impressió de l'missatge
 
 var firstName = `Mike` 
 var lastName = `Wazowski`
@@ -36,13 +35,19 @@ var lastName = `Wazowski`
 console.log(firstName + " " + lastName)
 
 // entrega 1, nivell 2, ex. 2: Invocar la funció mitjançant template literals
+// Omar: En el N2 E2 tienes que crear una función que devuelva un valor y ejecutar esa función dentro de un template literal (en un console.log)
+// KMJ: thank you. the instructions don't say any of that *eye roll*
 var firstName = `Mike` 
 var lastName = `Wazowski`
 var greeting = `Hello, ${firstName} ${lastName}! How's it going?`
 
-console.log(greeting)
+function printGreeting() {
+   return greeting
+}
+console.log(`${printGreeting()}`);
 
 // entrega 1, nivell 3, ex. 1: Crea una matriu de deu funcions i empleni-la mitjançant un bucle. Cada funció comptarà del 0-9 imprimint-ho per pantalla. Invoqui cada funció de l'array iterativament. Haurà d'imprimir-se per pantalla el compte de 0-9 deu vegades
+// Omar: El N3 E1 está CASI bien. Al hacer forEach(say) lo que haces es ejecutar la función say por cada elemento del array. Lo que hay que hacer es un bucle que coja cada elemento del array y lo ejecute (añadiéndole "()" al final)
 const pirates = []
 var say = function walkThePlank(i) {
    for (var i = 0; i < 10; i++) {
@@ -54,7 +59,9 @@ for (var i = 0; i < 10; i++) {
    pirates.push(say);
 }
 
-pirates.forEach(say);
+for (i = 0; i < pirates.length; i++) {
+  pirates[i]();
+}
 
 
 /* 
