@@ -1,0 +1,50 @@
+// Sprint 1, entrega 2 (Classes & Arrow Functions)
+// entrega 2, nivell 1: Utilitza l'intèrpret de node en tots els casos!!!), nivell 1: Imprimir per pantalla el resultat d'una arrow function autoinvocable que sumi dos nombres.
+// KMJ: NodeJS! create a Self-Executing Anonymous Function (aka IIFE: Immediately Invoked Function Expression), that adds two numbers; make it an arrow function
+// Omar: Casi, Kyla! Este enunciado es tricky: tienes que mostrar por consola el resultado de la función, no ejecutar una función que muestra por consola el resultado. It's subtle, I know.
+// KMJ2: soooo, put console.log outside of function body? how is that different?
+
+var addSomeShit = ( function sum(a, b) {
+   var Add = (a, b) => {
+     return (a + b);
+   }
+   return (a + b);
+  }) (37, 37);
+console.log(addSomeShit)
+
+// entrega 2, nivell 2, ex. 1: Crear una arrow function que, rebent un paràmetre, retorni un objecte amb un atribut que tingui com a valor el paràmetre rebut.
+// KMJ attempt 1: whaaat TF does all of that mean?!
+// KMJ attempt 2: create an arrow function that, upon receiving a parameter, returns an object with an attribute* whose value is the parameter received. *(Remember: "An attribute is only ever a string".) First guess: [key:value pair? ¿pass in (a) and get a:1 ? ]
+
+var kid22 = "Victoria"
+var MP4 = kid22 => console.log(kid22);
+MP4(kid22);
+
+// entrega 2, nivell 2, ex. 2: Crear una classe Persona que rebi un paràmetre 'nom' a l'ésser creat. La classe inclourà un mètode decirNombre que imprimeixi per consola el paràmetre 'Nom'. Invocar el mètode decirNombre des de fora de la classe.
+// KMJ: create a class, Persona, which receives a parameter 'nom' of the person created. The class should include a method, decirNombre, which prints to the console the parameter 'Nom'. Call the method decirNombre() from outside of the class.
+class Persona {
+   constructor (nom) {
+     this.nom = nom
+   }
+   
+   decirNombre () { 
+     console.log(`${this.nom}`)
+   }
+}
+let person1 = new Persona ('Reese');
+person1.decirNombre();
+
+
+// entrega 2, nivell 3, ex. 1: Crear una function creadora d'objectes, abstraient la definició de les classes. Invocar-amb diferents definicions.
+// KMJ: create a constructor function with an abstract definition of the class(es). Call it with different definitions.
+
+class Friend {
+  constructor(child) {
+    this.child = child;
+    if (this.constructor === Friend) {
+      throw new Error("Instance of Abstract class cannot be instantiated");
+    }
+  }
+};
+
+var Amy = new Friend(`Bea`);
