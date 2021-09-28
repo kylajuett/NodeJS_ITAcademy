@@ -37,6 +37,24 @@ person1.decirNombre();
 
 // entrega 2, nivell 3, ex. 1: Crear una function creadora d'objectes, abstraient la definició de les classes. Invocar-amb diferents definicions.
 // KMJ: create a constructor function with an abstract definition of the class(es). Call it with different definitions.
+// Omar: casi! Ya tienes la clase abstracta, ahora tienes que hacer una función que haga instancias de esa clase
+
+class Friend {
+  constructor(baby) {
+    this.baby = baby;
+    if (this.constructor === Friend) {
+      throw new Error("Instance of Abstract class cannot be instantiated");
+    }
+  }
+}
+
+Amy2.prototype = new Friend;
+function Amy2(actualFriend) {
+    this.actualFriend = `Jo`;
+    console.log("wine & take-out");
+}
+
+Amy2(`Jo`);
 
 class Friend {
   constructor(child) {
