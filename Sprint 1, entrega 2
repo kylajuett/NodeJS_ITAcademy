@@ -15,10 +15,16 @@ console.log(addSomeShit)
 // entrega 2, nivell 2, ex. 1: Crear una arrow function que, rebent un paràmetre, retorni un objecte amb un atribut que tingui com a valor el paràmetre rebut.
 // KMJ attempt 1: whaaat TF does all of that mean?!
 // KMJ attempt 2: create an arrow function that, upon receiving a parameter, returns an object with an attribute* whose value is the parameter received. *(Remember: "An attribute is only ever a string".) First guess: [key:value pair? ¿pass in (a) and get a:1 ? ]
+// Omar: La función del N2 E1  no devuelve un objeto!
 
-var kid22 = "Victoria"
-var MP4 = kid22 => console.log(kid22);
-MP4(kid22);
+const cousin = {
+  name: 'Victoria',
+  age: 5,
+  interests: ['princesses', 'swimming']
+};
+
+var cousinKid = name => console.log(cousin);
+cousinKid(name);
 
 // entrega 2, nivell 2, ex. 2: Crear una classe Persona que rebi un paràmetre 'nom' a l'ésser creat. La classe inclourà un mètode decirNombre que imprimeixi per consola el paràmetre 'Nom'. Invocar el mètode decirNombre des de fora de la classe.
 // KMJ: create a class, Persona, which receives a parameter 'nom' of the person created. The class should include a method, decirNombre, which prints to the console the parameter 'Nom'. Call the method decirNombre() from outside of the class.
@@ -43,10 +49,12 @@ class Friend {
   constructor(baby) {
     this.baby = baby;
     if (this.constructor === Friend) {
-      throw new Error("Instance of Abstract class cannot be instantiated");
+      throw new Error("Halt! Instance of Abstract class cannot be instantiated.");
     }
   }
 }
+
+// var Amy = new Friend(`Bea`);
 
 Amy2.prototype = new Friend;
 function Amy2(actualFriend) {
@@ -56,13 +64,4 @@ function Amy2(actualFriend) {
 
 Amy2(`Jo`);
 
-class Friend {
-  constructor(child) {
-    this.child = child;
-    if (this.constructor === Friend) {
-      throw new Error("Instance of Abstract class cannot be instantiated");
-    }
-  }
-};
 
-var Amy = new Friend(`Bea`);
